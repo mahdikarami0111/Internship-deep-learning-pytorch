@@ -49,7 +49,7 @@ class FC:
         else:
             batch_size = dZ.shape[1]
 
-        # TODO: backward part
+        
         W, b = self.parameters
         dW = (1 / batch_size) * np.dot(dZ, A_prev_tmp.T)
         db = (1 / batch_size) * np.sum(dZ, axis=1, keepdims=True)
